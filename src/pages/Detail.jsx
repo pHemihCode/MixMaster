@@ -15,16 +15,16 @@ function Detail() {
     <div className='the-images rounded-md the-details overflow-y-auto'>
         {
             details.map((detail) => {
-                const {strIngredient1,strIngredient2,strIngredient3,strIngredient4,strIngredient5,strIngredient6,strIngredient7} = detail
+                const {strIngredient1,strIngredient2,strIngredient3} = detail
                 return(
                     <div key={detail.idDrink}>
                        <div className='header text-center'>
                         <Link to='/' className='details font-normal'>Back Home</Link>
                         <h1 className='font-normal text-2xl'>{detail.strDrink}</h1>
                        </div>
-                       <div className="img-details text-md font-semibold">
-                         <img src={detail.strDrinkThumb} alt={detail.strDrink} className='my-5' />
-                         <div className="full my-8">
+                       <div className="img-details text-md font-semibold xl:flex xl:flex-row xl:justify-evenly xl:items-center">
+                         <img src={detail.strDrinkThumb} alt={detail.strDrink} className='my-5 xl:w-2/5' />
+                         <div className="full my-8 xl:w-2/5">
                             <h1 className=''><span>Name : </span>{detail.strDrink}</h1>
                             <h1 className=''><span>Category :</span>{detail.strCategory}</h1>
                             <h1 className=''><span>Info :</span>{detail.strAlcoholic}</h1>
